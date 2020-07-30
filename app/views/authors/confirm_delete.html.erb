@@ -1,0 +1,25 @@
+<h1>Delete Author</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @author.first_name %>
+  <%= @author.last_name %>
+</p>
+<% if @author.num_books > 0 %>
+<p>
+    <strong>Notice:</strong> This author has <%= @author.num_books %> book(s). You must delete the author's books before deleting the author.
+      Are you sure that you want to delete the following books:
+      <% @author.book_titles.each do |book| %>
+        <li><%= book %></li>   
+      <% end %>
+</p>
+<% end %>
+
+<%= form_with model: @author, local: true, method: 'delete' do |f| %>
+    <%= f.submit "Confirm Delete" %>
+<% end %>
+
+<p>
+<%= link_to 'Edit Author', edit_author_path(@author) %> |    
+<%= link_to 'Show Authors', authors_path %> |
+<%= link_to 'Home', root_path %>
+</p>

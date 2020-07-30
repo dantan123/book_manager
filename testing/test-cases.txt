@@ -1,0 +1,42 @@
+Test case #1.
+1. Go to app's home page -> Users -> New User
+2. Enter an email with uppercased letters; ex.JARED@asd.com
+3. Expected result: the email should be saved as jared@asd.com
+
+Test case #2.
+1. Go to app's home page -> Users -> New User
+2. Enter an email that already exists in the seeded database; ex. fred@fred.com
+3. Expected result: a message that says email is already taken
+
+Test case #3.
+1. Go to app's home page -> Users -> New User
+2. Enter an email that doesn't exist in the seeded database yet ex.decareau@dc.com
+3. Expected result: the new user and email get added
+
+Test case #4.
+1. Go to app's home page -> Authors -> New Author
+2. Enter first name and last name fields; ex. Shin Wang
+3. Expected result: Shin Wang is added
+
+Test case #5.
+1. Go to app's home page -> Authors -> New Author
+2. Enter a first name but leave the last name blank; ex. Bon
+3. Expected result: remain on the same page with the message "last name can't be blank"
+
+Test case #6. 
+1. Go to app's home page -> Authors -> New Author
+2. Enter a last name but leave the first name blank; ex. Tan
+3. Expected result: remain on the same page with the message "first name can't be blank"
+
+Test case #7. 
+1. Go to app's home page -> Authors
+2. Delete an author with books ex. Suzzane Collins
+3. Expected result: back to author's index page with the message 
+   "Author and author's books were successfully deleted"
+4. Go to Books and the author's books no longer exist in the database
+
+Test case #8. 
+1. Go to app's home page -> Authors
+2. Delete an author with no books (can be user-created) ex. Dan Tan
+3. Expected result: back to author's index page with the message 
+   "Author and author's books were successfully deleted"
